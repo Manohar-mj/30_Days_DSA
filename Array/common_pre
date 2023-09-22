@@ -1,0 +1,18 @@
+def fun(arr):
+    if not arr: return ""
+    #sort
+    arr.sort()
+    # first word
+    first_word=arr[0]
+    last_word=arr[-1]
+    #last words
+    cmn_pre=[]
+    #loop iteration and break the value if not prefix
+    for i in range(len(first_word)):
+        if first_word[i] ==last_word[i]:
+            cmn_pre.append(first_word[i])
+        else:
+            break
+    return ''.join(cmn_pre)
+arr=["meme","mama","me","mem"]
+print(fun(arr))
